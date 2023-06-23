@@ -1,0 +1,70 @@
+site_name: django-requests-api
+site_url: https://github.com/DLRSP/django-requests-api/
+site_description: Django application to provide simple and shared requests client.
+
+repo_name: DLRSP/django-requests-api
+repo_url: https://github.com/DLRSP/django-requests-api/
+
+theme:
+    name: 'material'
+    palette:
+#      - primary: 'black'
+#      - accent: 'indigo'
+      - scheme: default
+        toggle:
+          icon: material/weather-sunny
+          name: Switch to dark mode
+      - scheme: slate #
+        toggle:
+          icon: material/weather-night
+          name: Switch to light mode
+    features:
+      - navigation.instant
+      - navigation.top
+      - content.code.annotate
+      - content.tabs.link
+      - search.suggest
+      - search.highlight
+    icon:
+        repo: fontawesome/brands/github-alt
+
+plugins:
+  - search
+  - git-revision-date
+#  - tags
+
+extra:
+  analytics:
+    provider: google
+    property: G-7VL775RPH9
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/DlrspTwits
+      name: DLRSP on Twitter
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:dlrsp.dev@gmail.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/DLRSP
+
+markdown_extensions:
+ - toc:
+    anchorlink: True
+ - pymdownx.tabbed:
+    alternate_style: true
+ - pymdownx.highlight:
+ - pymdownx.inlinehilite:
+ - pymdownx.superfences:
+ - pymdownx.snippets:
+
+nav:
+ - Quickstart: 'index.md'
+ - Tutorials:
+    - 'Example': 'tutorial/example.md'
+    - 'Customize':
+      - 'Templates': 'tutorial/templates.md'
+ - Community:
+    - 'References': 'community/references.md'
+    - 'Contributing': 'community/contributing.md'
+    - 'Third-Party-Packages': 'community/third-party-packages.md'
+
+copyright: Copyright &copy; 2010-present DLRSP
