@@ -1,3 +1,4 @@
+from __future__ import annotations
 from http.cookiejar import Cookie
 
 import requests
