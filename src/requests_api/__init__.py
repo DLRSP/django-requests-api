@@ -1,7 +1,7 @@
 import django
 from .requests_api import RequestsApi
 
-__version__ = "0.3.1-dev"
+__version__ = "0.3.1"
 __license__ = "MIT"
 __title__ = "requests_api"
 
