@@ -1,3 +1,4 @@
+---
 name: CI/CD
 
 on:
@@ -9,7 +10,6 @@ on:
   pull_request:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   ci:
