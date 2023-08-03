@@ -9,7 +9,7 @@
 
 ## GitHub ![GitHub release](https://img.shields.io/github/tag/DLRSP/django-requests-api.svg) ![GitHub release](https://img.shields.io/github/release/DLRSP/django-requests-api.svg)
 
-## Test [![codecov.io](https://codecov.io/github/DLRSP/django-requests-api/coverage.svg?branch=master)](https://codecov.io/github/DLRSP/django-requests-api?branch=master) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/DLRSP/django-requests-api/master.svg)](https://results.pre-commit.ci/latest/github/DLRSP/django-requests-api/master) [![gitthub.com](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yml/badge.svg)](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yml)
+## Test [![codecov.io](https://codecov.io/github/DLRSP/django-requests-api/coverage.svg?branch=master)](https://codecov.io/github/DLRSP/django-requests-api?branch=master) [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/DLRSP/django-requests-api/master.svg)](https://results.pre-commit.ci/latest/github/DLRSP/django-requests-api/master) [![gitthub.com](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yaml/badge.svg)](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yaml)
 
 ## Check Demo Project
 * Browser the demo app on-line on [Heroku](https://django-requests-api.herokuapp.com/)
