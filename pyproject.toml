@@ -52,3 +52,14 @@ type = [
   { name = "Improved Documentation",    directory = "doc",     showcontent = true },
   { name = "Trivial Changes",           directory = "trivial", showcontent = false },
 ]
+
+# bump-my-version
+[tool.bumpversion]
+current_version = "0.3.3"
+allow_dirty = true
+
+[[tool.bumpversion.files]]
+filename = "./setup.cfg"
+
+[[tool.bumpversion.files]]
+filename = "./src/requests_api/__init__.py"

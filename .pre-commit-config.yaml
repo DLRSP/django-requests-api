@@ -10,7 +10,6 @@ repos:
   - id: check-toml
   - id: end-of-file-fixer
   - id: trailing-whitespace
-    exclude: .bumpversion.cfg
 - repo: https://github.com/asottile/pyupgrade
   rev: v3.7.0
   hooks:
@@ -45,4 +44,4 @@ repos:
   hooks:
   - id: check-manifest
     args: [--no-build-isolation]
-    additional_dependencies: ["Django>=2.2"]
+    additional_dependencies: ["Django>=3.2"]
