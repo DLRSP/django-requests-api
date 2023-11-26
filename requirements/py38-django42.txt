@@ -126,9 +126,9 @@ django==4.2.7 \
     --hash=sha256:8e0f1c2c2786b5c0e39fe1afce24c926040fad47c8ea8ad30aaf1188df29fc41 \
     --hash=sha256:e1d37c51ad26186de355cbcec16613ebdabfa9689bbade9c538835205a8abbe9
     # via -r requirements/requirements.in
-idna==3.5 \
-    --hash=sha256:27009fe2735bf8723353582d48575b23c533cc2c2de7b5a68908d91b5eb18d08 \
-    --hash=sha256:79b8f0ac92d2351be5f6122356c9a592c96d81c9a79e4b488bf2a6a15f88057a
+idna==3.6 \
+    --hash=sha256:9ecdbbd083b06798ae1e86adcbfe8ab1479cf864e4ee30fe4e46a003d12491ca \
+    --hash=sha256:c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f
     # via requests
 requests==2.31.0 \
     --hash=sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f \
