@@ -18,6 +18,9 @@ class RequestsApi:
     def request(self, method: str | bytes, url: str | bytes, **kwargs) -> Response:
         return self.session.request(method, self.base_url + url, **kwargs)
 
+    def options(self, url: str | bytes, **kwargs) -> Response:
+        return self.session.options(self.base_url + url, **kwargs)
+
     def head(self, url: str | bytes, **kwargs) -> Response:
         return self.session.head(self.base_url + url, **kwargs)
 
