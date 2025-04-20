@@ -20,7 +20,7 @@ class RequestsApi:
         """
         Set bind to the specified local address rather than auto-selecting it
         """
-        for prefix in ('http://', 'https://'):
+        for prefix in ("http://", "https://"):
             self.session.get_adapter(prefix).init_poolmanager(
                 connections=requests.adapters.DEFAULT_POOLSIZE,
                 maxsize=requests.adapters.DEFAULT_POOLSIZE,
@@ -29,7 +29,9 @@ class RequestsApi:
             )
         return self.session
 
-    def request(self, method: str | bytes, url: str | bytes, **kwargs) -> requests.Response:
+    def request(
+        self, method: str | bytes, url: str | bytes, **kwargs
+    ) -> requests.Response:
         return self.session.request(method, self.base_url + url, **kwargs)
 
     def options(self, url: str | bytes, **kwargs) -> requests.Response:
