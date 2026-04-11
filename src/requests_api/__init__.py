@@ -9,7 +9,7 @@ from .helpers import (
 )
 from .requests_api import RequestsApi
 
-__version__ = "0.8.2"
+__version__ = "0.6.1"
 __version_info__ = tuple(int(i) if i.isdigit() else i for i in __version__.split("."))
 __license__ = "MIT"
 __title__ = "requests_api"
