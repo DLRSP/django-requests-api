@@ -17,7 +17,7 @@
 
 ## Requirements
 -   Python 3.8+ supported.
--   Django 3.2+ supported.
+-   Django 4.2+ supported.
 
 ## Setup
 1. Install from **pip**:
@@ -46,6 +46,34 @@ print(r.json())
 github = RequestsApi("https://api.github.com", headers={"Authorization": "token abcdef"})
 r = github.get("/user", headers={"Accept": "application/json"})
 print(r.text)
+```
+
+Paths are joined to `base_url` with a single slash (with or without leading/trailing slashes on either part). If the path is already an absolute URL (`http://` or `https://`), it is used as-is. The package declares a dependency on **requests** (see `install_requires`).
+
+### Reusable helpers
+
+`RequestsApi` lives in `requests_api.requests_api`; the utilities are in `requests_api.helpers`. All are re-exported from the package root so you can still use `from requests_api import …`.
+
+```python
+from requests_api import (
+    copy_get_params_with_overrides,
+    normalize_api_language,
+    requests_api_for_base,
+)
+
+# Map Django language to an API that only supports a subset of codes
+lang = normalize_api_language(
+    request.LANGUAGE_CODE,
+    allowed=("it", "en"),
+    fallback="en",
+)
+
+# Outbound GET: keep the browser query string but force lang=
+params = copy_get_params_with_overrides(request, lang=lang)
+
+# One shared Session / connection pool per base URL in the process
+client = requests_api_for_base("https://www.example.com")
+r = client.get("api/resource", params=params, timeout=30)
 ```
 
 ## Run Example Project

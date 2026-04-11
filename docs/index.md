@@ -7,7 +7,7 @@ Django's application to provide simple and shared requests client.
 These packages are required:
 
 -   Python 3.8+ supported.
--   Django 3.2+ supported.
+-   Django 4.2+ supported.
 
 We **highly recommend** and only officially support the latest patch release of each Python and Django series.
 

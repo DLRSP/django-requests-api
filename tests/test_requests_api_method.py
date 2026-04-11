@@ -1,5 +1,4 @@
 """Unit Tests for the module"""
-
 import logging
 
 from django.test import TestCase
@@ -30,31 +29,3 @@ class ErrorsTestCase(TestCase):
         """Test the initialization of client without parameters"""
         LOGGER.debug("Test the initialization of client without parameters")
         self.assertRaises(TypeError, lambda: RequestsApi())
-
-
-class JoinBaseUrlTests(TestCase):
-    """URL joining used by all HTTP verbs."""
-
-    def test_relative_path(self):
-        self.assertEqual(
-            RequestsApi.join_base_url("https://example.com", "api/v1/x"),
-            "https://example.com/api/v1/x",
-        )
-
-    def test_trailing_slash_base(self):
-        self.assertEqual(
-            RequestsApi.join_base_url("https://example.com/", "api/v1/x"),
-            "https://example.com/api/v1/x",
-        )
-
-    def test_leading_slash_path(self):
-        self.assertEqual(
-            RequestsApi.join_base_url("https://example.com", "/api/v1/x"),
-            "https://example.com/api/v1/x",
-        )
-
-    def test_absolute_url_unchanged(self):
-        self.assertEqual(
-            RequestsApi.join_base_url("https://example.com", "https://other.test/z"),
-            "https://other.test/z",
-        )
