@@ -133,7 +133,7 @@ type = [
 ]
 
 [tool.bumpversion]
-current_version = "0.6.3"
+current_version = "0.6.4"
 allow_dirty = true
 
 [[tool.bumpversion.files]]

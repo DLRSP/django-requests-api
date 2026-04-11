@@ -24,7 +24,7 @@ __all__ = [
     "requests_api_for_base",
 ]
 
-__version__ = "0.6.3"
+__version__ = "0.6.4"
 __version_info__ = tuple(int(i) if i.isdigit() else i for i in __version__.split("."))
 __license__ = "MIT"
 __title__ = "requests_api"
