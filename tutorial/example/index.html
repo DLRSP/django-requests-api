@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Django application to provide simple and shared requests client.">
+        <meta name="description" content="Thin requests.Session wrapper and helpers for Django projects.">
       
       
       
@@ -16,7 +16,7 @@
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../../community/references/">
+        <link rel="next" href="../configuration/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Example - django-requests-api</title>
+        <title>Example project - django-requests-api</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#example" class="md-skip">
+        <a href="#example-project" class="md-skip">
           Skip to content
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Example
+              Example project
             
           </span>
         </div>
@@ -279,7 +279,7 @@
   <span class="md-ellipsis">
     
   
-    Quickstart
+    Home
   
 
     
@@ -364,7 +364,7 @@
   <span class="md-ellipsis">
     
   
-    Example
+    Example project
   
 
     
@@ -382,7 +382,7 @@
   <span class="md-ellipsis">
     
   
-    Example
+    Example project
   
 
     
@@ -408,10 +408,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-setup" class="md-nav__link">
+  <a href="#clone-and-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Project setup
+        Clone and run
       
     </span>
   </a>
@@ -433,62 +433,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Customize
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Customize
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../templates.md" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Templates
+    Configuration
   
 
     
@@ -497,14 +450,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -599,14 +544,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../community/contributing/" class="md-nav__link">
+      <a href="../../community/http-status-codes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    HTTP status codes
   
 
     
@@ -627,14 +572,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../community/third-party-packages.md" class="md-nav__link">
+      <a href="../../community/contributing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Third-Party-Packages
+    Contributing
   
 
     
@@ -682,10 +627,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#project-setup" class="md-nav__link">
+  <a href="#clone-and-run" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Project setup
+        Clone and run
       
     </span>
   </a>
@@ -712,27 +657,24 @@
   
 
 
-<h1 id="example"><a class="toclink" href="#example">Example</a></h1>
-<p>Create a simple App to allow admin users wrap Django errors.</p>
-<h2 id="project-setup"><a class="toclink" href="#project-setup">Project setup</a></h2>
-<p>Clone the Django project named <code>example</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Clone the example&#39;s project repository</span>
-git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">50</span><span class="w"> </span>--branch<span class="o">=</span>django-requests-api<span class="w"> </span>https://github.com/DLRSP/example.git<span class="w"> </span>example-errors
-<span class="nb">cd</span><span class="w"> </span>example-errors
+<h1 id="example-project"><a class="toclink" href="#example-project">Example project</a></h1>
+<p>The demo lives in <strong><a href="https://github.com/DLRSP/example">DLRSP/example</a></strong> on branch <strong><code>django-requests-api</code></strong>. It is a small Django site wired to this package.</p>
+<h2 id="clone-and-run"><a class="toclink" href="#clone-and-run">Clone and run</a></h2>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">50</span><span class="w"> </span>--branch<span class="o">=</span>django-requests-api<span class="w"> </span>https://github.com/DLRSP/example.git<span class="w"> </span>example-requests-api
+<span class="nb">cd</span><span class="w"> </span>example-requests-api
 
-<span class="c1"># Create a virtual environment to isolate our package dependencies locally</span>
 python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env
-<span class="nb">source</span><span class="w"> </span>env/bin/activate<span class="w">  </span><span class="c1"># On Windows use `env\Scripts\activate`</span>
+<span class="nb">source</span><span class="w"> </span>env/bin/activate
+<span class="c1"># Windows: env\Scripts\activate</span>
 
-<span class="c1"># Install Django and django-requests-api into the virtual environment</span>
-pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/py38-django32.txt
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements/py312-django42.txt
+<span class="c1"># Pick another file under requirements/ if it matches your Python/Django versions.</span>
 
-<span class="c1"># Now sync your database for the first time</span>
 python<span class="w"> </span>manage.py<span class="w"> </span>migrate
-
-<span class="c1"># Run the local server</span>
 python<span class="w"> </span>manage.py<span class="w"> </span>runserver
 </code></pre></div>
+<p>Open <a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> and browse the routes the example defines.</p>
+<p>To use only this library in an existing project, you do not need the example: install <strong><code>django-requests-api</code></strong>, add <strong><code>requests_api</code></strong> to <code>INSTALLED_APPS</code>, and import from <code>requests_api</code> as in the <a href="../../">home page</a>.</p>
 
 
 
@@ -753,7 +695,7 @@ python<span class="w"> </span>manage.py<span class="w"> </span>runserver
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2023-06-23
+    2026-04-12
   </span>
 
     

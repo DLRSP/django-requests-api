@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Django application to provide simple and shared requests client.">
+        <meta name="description" content="Thin requests.Session wrapper and helpers for Django projects.">
       
       
       
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#django-requests-api" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quickstart
+              Home
             
           </span>
         </div>
@@ -276,6 +276,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -284,7 +286,7 @@
   <span class="md-ellipsis">
     
   
-    Quickstart
+    Home
   
 
     
@@ -302,7 +304,7 @@
   <span class="md-ellipsis">
     
   
-    Quickstart
+    Home
   
 
     
@@ -317,6 +319,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -348,10 +352,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage
+        Basic usage
       
     </span>
   </a>
@@ -359,10 +363,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#helpers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        Helpers
       
     </span>
   </a>
@@ -370,10 +374,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quickstart" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quickstart
+        Configuration
       
     </span>
   </a>
@@ -381,10 +385,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#customize" class="md-nav__link">
+  <a href="#example-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Customize
+        Example project
       
     </span>
   </a>
@@ -392,10 +396,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#development" class="md-nav__link">
+  <a href="#contributing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Development
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -493,7 +508,7 @@
   <span class="md-ellipsis">
     
   
-    Example
+    Example project
   
 
     
@@ -506,53 +521,6 @@
   
 
               
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Customize
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Customize
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -561,14 +529,14 @@
   
   
     <li class="md-nav__item">
-      <a href="tutorial/templates.md" class="md-nav__link">
+      <a href="tutorial/configuration/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Templates
+    Configuration
   
 
     
@@ -577,14 +545,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -679,14 +639,14 @@
   
   
     <li class="md-nav__item">
-      <a href="community/contributing/" class="md-nav__link">
+      <a href="community/http-status-codes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    HTTP status codes
   
 
     
@@ -707,14 +667,14 @@
   
   
     <li class="md-nav__item">
-      <a href="community/third-party-packages.md" class="md-nav__link">
+      <a href="community/contributing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Third-Party-Packages
+    Contributing
   
 
     
@@ -752,6 +712,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -782,10 +744,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#basic-usage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Usage
+        Basic usage
       
     </span>
   </a>
@@ -793,10 +755,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example" class="md-nav__link">
+  <a href="#helpers" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example
+        Helpers
       
     </span>
   </a>
@@ -804,10 +766,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quickstart" class="md-nav__link">
+  <a href="#configuration" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quickstart
+        Configuration
       
     </span>
   </a>
@@ -815,10 +777,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#customize" class="md-nav__link">
+  <a href="#example-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Customize
+        Example project
       
     </span>
   </a>
@@ -826,10 +788,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#development" class="md-nav__link">
+  <a href="#contributing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Development
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -878,60 +851,69 @@
   
 
 
-  <h1>Quickstart</h1>
-
-<p>Django's application to provide simple and shared requests client.</p>
+<h1 id="django-requests-api"><a class="toclink" href="#django-requests-api">django-requests-api</a></h1>
+<p>Small Django app: a <code>requests.Session</code> wrapper with a fixed base URL, plus helpers for language codes and query strings. Use it when several views talk to the same HTTP API and you want connection reuse and predictable URL joining.</p>
 <hr />
 <h2 id="requirements"><a class="toclink" href="#requirements">Requirements</a></h2>
-<p>These packages are required:</p>
 <ul>
-<li>Python 3.8+ supported.</li>
-<li>Django 4.2+ supported.</li>
+<li>Python 3.8 or newer</li>
+<li>Django 4.2 or newer (see the package metadata for the exact matrix)</li>
 </ul>
-<p>We <strong>highly recommend</strong> and only officially support the latest patch release of each Python and Django series.</p>
+<p>We test against current patch releases of supported Python and Django versions.</p>
 <h2 id="installation"><a class="toclink" href="#installation">Installation</a></h2>
-<ol>
-<li>
-<p>Install from <strong>pip</strong>:
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>django-requests-api
-</code></pre></div></p>
-</li>
-<li>
-<p>Modify <code>settings.py</code> by adding the app to <code>INSTALLED_APPS</code>:
+</code></pre></div>
+<p>Add the app to <code>INSTALLED_APPS</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">(</span>
     <span class="c1"># ...</span>
     <span class="s2">&quot;requests_api&quot;</span><span class="p">,</span>
     <span class="c1"># ...</span>
 <span class="p">)</span>
-</code></pre></div></p>
-</li>
-</ol>
-<h2 id="usage"><a class="toclink" href="#usage">Usage</a></h2>
-<div class="highlight"><pre><span></span><code>from<span class="w"> </span>requests_api<span class="w"> </span>import<span class="w"> </span>RequestsApi
-
-<span class="nv">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>RequestsApi<span class="o">(</span><span class="s2">&quot;https://api.publicapis.org&quot;</span><span class="o">)</span>
-<span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>client.get<span class="o">(</span><span class="s2">&quot;/entries&quot;</span><span class="o">)</span>
-print<span class="o">(</span>r.json<span class="o">())</span>
-
-<span class="nv">github</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>RequestsApi<span class="o">(</span><span class="s2">&quot;https://api.github.com&quot;</span>,<span class="w"> </span><span class="nv">headers</span><span class="o">={</span><span class="s2">&quot;Authorization&quot;</span>:<span class="w"> </span><span class="s2">&quot;token abcdef&quot;</span><span class="o">})</span>
-<span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>github.get<span class="o">(</span><span class="s2">&quot;/user&quot;</span>,<span class="w"> </span><span class="nv">headers</span><span class="o">={</span><span class="s2">&quot;Accept&quot;</span>:<span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="o">})</span>
-print<span class="o">(</span>r.text<span class="o">)</span>
 </code></pre></div>
-<h2 id="example"><a class="toclink" href="#example">Example</a></h2>
-<p>Let's take a look at a quick example of using this project to build a simple App with <strong>custom error pages</strong>.</p>
-<ul>
-<li>Check the demo repo on <a href="https://github.com/DLRSP/example/tree/django-requests-api">GitHub</a></li>
-</ul>
-<h2 id="quickstart"><a class="toclink" href="#quickstart">Quickstart</a></h2>
-<p>Can't wait to get started? The <a href="tutorial/example/">quickstart guide</a> is the fastest way to get up and running and building a <strong>demo App</strong>.</p>
-<h2 id="customize"><a class="toclink" href="#customize">Customize</a></h2>
-<p>Do you want custom solutions? The [customize][customize] section is an overview of which part are easy to design.
-If you find how to personalize different scenarios or behaviors, a <a href="community/contributing.png#pull-request">pull request</a> is welcome!</p>
-<h2 id="development"><a class="toclink" href="#development">Development</a></h2>
-<p>See the <a href="community/contributing/">Contribution guidelines</a> for information on how to clone  the repository, run the test suite and contribute changes back to django-requests-api.</p>
+<h2 id="basic-usage"><a class="toclink" href="#basic-usage">Basic usage</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">requests_api</span><span class="w"> </span><span class="kn">import</span> <span class="n">RequestsApi</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">RequestsApi</span><span class="p">(</span><span class="s2">&quot;https://api.publicapis.org&quot;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/entries&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+
+<span class="n">github</span> <span class="o">=</span> <span class="n">RequestsApi</span><span class="p">(</span>
+    <span class="s2">&quot;https://api.github.com&quot;</span><span class="p">,</span>
+    <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="s2">&quot;token abcdef&quot;</span><span class="p">},</span>
+<span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">github</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/user&quot;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Accept&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+<p>Relative paths are joined to <code>base_url</code> with a single slash. Paths that already start with <code>http://</code> or <code>https://</code> are left as-is. The library depends on the <strong>requests</strong> package.</p>
+<h2 id="helpers"><a class="toclink" href="#helpers">Helpers</a></h2>
+<p><code>RequestsApi</code> is defined in <code>requests_api.requests_api</code>. Shared utilities live in <code>requests_api.helpers</code> and are re-exported from the top-level package:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">requests_api</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">copy_get_params_with_overrides</span><span class="p">,</span>
+    <span class="n">normalize_api_language</span><span class="p">,</span>
+    <span class="n">requests_api_for_base</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">lang</span> <span class="o">=</span> <span class="n">normalize_api_language</span><span class="p">(</span>
+    <span class="n">request</span><span class="o">.</span><span class="n">LANGUAGE_CODE</span><span class="p">,</span>
+    <span class="n">allowed</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;it&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">),</span>
+    <span class="n">fallback</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">params</span> <span class="o">=</span> <span class="n">copy_get_params_with_overrides</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="n">lang</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">requests_api_for_base</span><span class="p">(</span><span class="s2">&quot;https://www.example.com&quot;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;api/resource&quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</code></pre></div>
+<p><code>requests_api_for_base</code> returns one client per distinct base URL inside the process, up to a configurable limit (see <a href="tutorial/configuration/">Configuration</a>).</p>
+<h2 id="configuration"><a class="toclink" href="#configuration">Configuration</a></h2>
+<p>Optional settings (cache size for <code>requests_api_for_base</code>, optional default timeout helper) are read through <code>requests_api.conf</code>: Django settings <code>REQUESTS_API_*</code>, then <code>APP_CONFIG["requests_api"]</code>, then <code>requests_api.defaults</code>. Details: <a href="tutorial/configuration/">Configuration</a>.</p>
+<h2 id="example-project"><a class="toclink" href="#example-project">Example project</a></h2>
+<p>The <a href="https://github.com/DLRSP/example">DLRSP/example</a> repo has a <strong><code>django-requests-api</code></strong> branch with a runnable demo. Clone steps: <a href="tutorial/example/">Example project</a>.</p>
+<p>There is also a <a href="https://django-requests-api.herokuapp.com/">Heroku demo</a> (if still deployed).</p>
+<h2 id="contributing"><a class="toclink" href="#contributing">Contributing</a></h2>
+<p>Clone the repo, run the test suite, open a PR: <a href="community/contributing/">Contributing</a>.</p>
+<h2 id="references"><a class="toclink" href="#references">References</a></h2>
+<p>Links to <strong>requests</strong>, Django settings, other packages that ship this client, and an <a href="community/http-status-codes/">HTTP status code cheat sheet</a>: <a href="community/references/">References</a>.</p>
 <h2 id="security"><a class="toclink" href="#security">Security</a></h2>
-<p>If you believe you’ve found something in this project which has security implications, please <strong>do not raise the issue in a public forum</strong>.</p>
-<p>Send a description of the issue via email to <a href="mailto:dlrsp.issue@gmail.com">dlrsp.issue@gmail.com</a>.  The project maintainers will then work with you to resolve any issues where required, prior to any public disclosure.</p>
+<p>Do not open security issues in public trackers. Email <a href="mailto:dlrsp.issue@gmail.com">dlrsp.issue@gmail.com</a> with a description; maintainers will coordinate a fix before public disclosure.</p>
 <h2 id="license"><a class="toclink" href="#license">License</a></h2>
 <p>MIT License</p>
 <p>Copyright (c) 2010-present DLRSP (https://dlrsp.org) and other contributors.</p>
@@ -970,7 +952,7 @@ SOFTWARE.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2026-04-11
+    2026-04-12
   </span>
 
     

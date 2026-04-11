@@ -6,17 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Django application to provide simple and shared requests client.">
+        <meta name="description" content="Thin requests.Session wrapper and helpers for Django projects.">
       
       
       
         <link rel="canonical" href="https://github.com/DLRSP/django-requests-api/community/references/">
       
       
-        <link rel="prev" href="../../tutorial/example/">
+        <link rel="prev" href="../../tutorial/configuration/">
       
       
-        <link rel="next" href="../contributing/">
+        <link rel="next" href="../http-status-codes/">
       
       
         
@@ -279,7 +279,7 @@
   <span class="md-ellipsis">
     
   
-    Quickstart
+    Home
   
 
     
@@ -353,7 +353,7 @@
   <span class="md-ellipsis">
     
   
-    Example
+    Example project
   
 
     
@@ -366,53 +366,6 @@
   
 
               
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Customize
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Customize
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -421,14 +374,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tutorial/templates.md" class="md-nav__link">
+      <a href="../../tutorial/configuration/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Templates
+    Configuration
   
 
     
@@ -437,14 +390,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -573,10 +518,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#errors-topic" class="md-nav__link">
+  <a href="#core-stack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errors Topic
+        Core stack
       
     </span>
   </a>
@@ -584,22 +529,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errors-example" class="md-nav__link">
+  <a href="#other-django-python-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errors example
+        Other Django / Python packages
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Errors example">
+    <nav class="md-nav" aria-label="Other Django / Python packages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#404" class="md-nav__link">
+  <a href="#known-open-source-consumers-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        404
+        Known open-source consumers (GitHub)
       
     </span>
   </a>
@@ -627,14 +572,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../http-status-codes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Contributing
+    HTTP status codes
   
 
     
@@ -655,14 +600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../third-party-packages.md" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Third-Party-Packages
+    Contributing
   
 
     
@@ -710,10 +655,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#errors-topic" class="md-nav__link">
+  <a href="#core-stack" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errors Topic
+        Core stack
       
     </span>
   </a>
@@ -721,22 +666,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#errors-example" class="md-nav__link">
+  <a href="#other-django-python-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Errors example
+        Other Django / Python packages
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Errors example">
+    <nav class="md-nav" aria-label="Other Django / Python packages">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#404" class="md-nav__link">
+  <a href="#known-open-source-consumers-github" class="md-nav__link">
     <span class="md-ellipsis">
       
-        404
+        Known open-source consumers (GitHub)
       
     </span>
   </a>
@@ -769,15 +714,36 @@
 
 
 <h1 id="references"><a class="toclink" href="#references">References</a></h1>
-<h2 id="errors-topic"><a class="toclink" href="#errors-topic">Errors Topic</a></h2>
-<p><a href="https://www.onextrapixel.com/2011/03/09/the-secret-of-a-successful-error-page-with-35-amazing-404-page-designs/">the-secret-of-a-successful-error-page</a>
-<a href="https://www.onextrapixel.com/2011/10/21/applying-defensive-design-for-the-web/">applying-defensive-design-for-the-web</a>
-<a href="https://stackoverflow.com/questions/49162214/why-django-doesnt-have-error-page-handler-for-405-method-not-allowed">why-django-doesnt-have-error-page-handler-for-405</a>
-<a href="https://medium.com/scalereal/everything-you-need-to-know-about-middleware-in-django-2a3bd3853cd6">everything-you-need-to-know-about-middleware</a>
-<a href="https://dev.to/bikramjeetsingh/a-comprehensive-guide-to-django-middleware-2fee">comprehensive-guide-to-django-middleware</a></p>
-<h2 id="errors-example"><a class="toclink" href="#errors-example">Errors example</a></h2>
-<h3 id="404"><a class="toclink" href="#404">404</a></h3>
-<p><a href="https://www.py4u.net/discuss/1267324">py4u.net</a></p>
+<h2 id="core-stack"><a class="toclink" href="#core-stack">Core stack</a></h2>
+<ul>
+<li><strong><a href="https://requests.readthedocs.io/en/latest/">requests</a></strong> — HTTP library used under the hood.</li>
+<li><strong><a href="https://docs.djangoproject.com/en/stable/topics/settings/">Django settings</a></strong> — where <code>APP_CONFIG</code> and <code>REQUESTS_API_*</code> live.</li>
+<li><strong><a href="../http-status-codes/">HTTP status codes</a></strong> — short reference when handling <code>response.status_code</code>.</li>
+</ul>
+<h2 id="other-django-python-packages"><a class="toclink" href="#other-django-python-packages">Other Django / Python packages</a></h2>
+<p>Any project can depend on <strong>django-requests-api</strong>; you only need <code>requests_api</code> in <code>INSTALLED_APPS</code> and a normal install from PyPI or VCS.</p>
+<h3 id="known-open-source-consumers-github"><a class="toclink" href="#known-open-source-consumers-github">Known open-source consumers (GitHub)</a></h3>
+<p>These repositories under <strong><a href="https://github.com/DLRSP">github.com/DLRSP</a></strong> are discovered with GitHub code search. Queries and exclusions live in <strong><a href="https://github.com/DLRSP/django-requests-api/blob/main/.github/used-in.yaml"><code>.github/used-in.yaml</code></a></strong>. The table between the HTML markers is <strong>refreshed automatically</strong> by the reusable <a href="https://github.com/DLRSP/workflows/blob/main/.github/workflows/update-used-in.yaml"><code>update-used-in</code></a> workflow (weekly on this repository).</p>
+<!-- used-in:auto-table-start -->
+<table>
+<thead>
+<tr>
+<th>Repository</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/DLRSP/django-iubenda">django-iubenda</a></td>
+<td>Django application for privacy and cookies policy managed by Iubenda.</td>
+</tr>
+</tbody>
+</table>
+<!-- used-in:auto-table-end -->
+
+<p>The <strong><a href="https://github.com/DLRSP/example">example</a></strong> repo is the shared demo workspace; use the branch named after the package you are trying. It may not appear in the table until the search index picks up matching files.</p>
+<p>If a public consumer is missing, extend the markers in <code>README.md</code> / <code>references.md</code> only when you change the manual text around them—otherwise wait for the next scheduled sync or open a PR that updates the generated block.</p>
+<p>Private sites and forks are expected to use <strong>django-requests-api</strong> as well; they are not listed here.</p>
 
 
 
@@ -798,7 +764,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    2023-06-23
+    2026-04-12
   </span>
 
     
