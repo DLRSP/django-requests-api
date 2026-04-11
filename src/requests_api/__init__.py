@@ -9,7 +9,14 @@ from .helpers import (
 )
 from .requests_api import RequestsApi
 
-__version__ = "0.6.1"
+__all__ = [
+    "RequestsApi",
+    "copy_get_params_with_overrides",
+    "normalize_api_language",
+    "requests_api_for_base",
+]
+
+__version__ = "0.6.2"
 __version_info__ = tuple(int(i) if i.isdigit() else i for i in __version__.split("."))
 __license__ = "MIT"
 __title__ = "requests_api"
