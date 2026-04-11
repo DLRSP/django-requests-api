@@ -1,37 +1,34 @@
 site_name: django-requests-api
 site_url: https://github.com/DLRSP/django-requests-api/
-site_description: Django application to provide simple and shared requests client.
+site_description: Thin requests.Session wrapper and helpers for Django projects.
 
 repo_name: DLRSP/django-requests-api
 repo_url: https://github.com/DLRSP/django-requests-api/
 
 theme:
-    name: 'material'
-    palette:
-#      - primary: 'black'
-#      - accent: 'indigo'
-      - scheme: default
-        toggle:
-          icon: material/weather-sunny
-          name: Switch to dark mode
-      - scheme: slate #
-        toggle:
-          icon: material/weather-night
-          name: Switch to light mode
-    features:
-      - navigation.instant
-      - navigation.top
-      - content.code.annotate
-      - content.tabs.link
-      - search.suggest
-      - search.highlight
-    icon:
-        repo: fontawesome/brands/github-alt
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - content.code.annotate
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  icon:
+    repo: fontawesome/brands/github-alt
 
 plugins:
   - search
   - git-revision-date
-#  - tags
 
 extra:
   analytics:
@@ -47,24 +44,23 @@ extra:
       link: https://github.com/DLRSP
 
 markdown_extensions:
- - toc:
-    anchorlink: True
- - pymdownx.tabbed:
-    alternate_style: true
- - pymdownx.highlight:
- - pymdownx.inlinehilite:
- - pymdownx.superfences:
- - pymdownx.snippets:
+  - toc:
+      anchorlink: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+  - pymdownx.inlinehilite:
+  - pymdownx.superfences:
+  - pymdownx.snippets:
 
 nav:
- - Quickstart: 'index.md'
- - Tutorials:
-    - 'Example': 'tutorial/example.md'
-    - 'Customize':
-      - 'Templates': 'tutorial/templates.md'
- - Community:
-    - 'References': 'community/references.md'
-    - 'Contributing': 'community/contributing.md'
-    - 'Third-Party-Packages': 'community/third-party-packages.md'
+  - Home: index.md
+  - Tutorials:
+      - Example project: tutorial/example.md
+      - Configuration: tutorial/configuration.md
+  - Community:
+      - References: community/references.md
+      - HTTP status codes: community/http-status-codes.md
+      - Contributing: community/contributing.md
 
 copyright: Copyright &copy; 2010-present DLRSP

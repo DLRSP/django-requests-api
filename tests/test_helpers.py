@@ -1,9 +1,10 @@
 """Tests for normalize_api_language, copy_get_params_with_overrides, requests_api_for_base."""
 
-from django.test import RequestFactory, SimpleTestCase
+from django.test import RequestFactory, SimpleTestCase, override_settings
 
 from requests_api import (
     RequestsApi,
+    clear_requests_api_client_cache,
     copy_get_params_with_overrides,
     normalize_api_language,
     requests_api_for_base,
@@ -43,6 +44,10 @@ class NormalizeApiLanguageTests(SimpleTestCase):
 
 
 class CachedClientTests(SimpleTestCase):
+    def tearDown(self):
+        clear_requests_api_client_cache()
+        super().tearDown()
+
     def test_same_instance_same_base(self):
         a = requests_api_for_base("https://example.com")
         b = requests_api_for_base("https://example.com")
@@ -52,6 +57,19 @@ class CachedClientTests(SimpleTestCase):
     def test_different_base_different_instance(self):
         a = requests_api_for_base("https://a.example.com")
         b = requests_api_for_base("https://b.example.com")
+        self.assertIsNot(a, b)
+
+    @override_settings(APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 1}})
+    def test_lru_eviction_when_maxsize_one(self):
+        first = requests_api_for_base("https://a.example.com")
+        requests_api_for_base("https://b.example.com")
+        again = requests_api_for_base("https://a.example.com")
+        self.assertIsNot(first, again)
+
+    @override_settings(APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 0}})
+    def test_no_cache_when_maxsize_zero(self):
+        a = requests_api_for_base("https://same.example.com")
+        b = requests_api_for_base("https://same.example.com")
         self.assertIsNot(a, b)
 
 

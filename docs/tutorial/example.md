@@ -1,26 +1,24 @@
-# Example
+# Example project
 
-Create a simple App to allow admin users wrap Django errors.
+The demo lives in **[DLRSP/example](https://github.com/DLRSP/example)** on branch **`django-requests-api`**. It is a small Django site wired to this package.
 
-## Project setup
-
-Clone the Django project named `example`
+## Clone and run
 
 ```shell
-# Clone the example's project repository
-git clone --depth=50 --branch=django-requests-api https://github.com/DLRSP/example.git example-errors
-cd example-errors
+git clone --depth=50 --branch=django-requests-api https://github.com/DLRSP/example.git example-requests-api
+cd example-requests-api
 
-# Create a virtual environment to isolate our package dependencies locally
 python -m venv env
-source env/bin/activate  # On Windows use `env\Scripts\activate`
+source env/bin/activate
+# Windows: env\Scripts\activate
 
-# Install Django and django-requests-api into the virtual environment
-pip install -r requirements/py38-django32.txt
+pip install -r requirements/py312-django42.txt
+# Pick another file under requirements/ if it matches your Python/Django versions.
 
-# Now sync your database for the first time
 python manage.py migrate
-
-# Run the local server
 python manage.py runserver
 ```
+
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000) and browse the routes the example defines.
+
+To use only this library in an existing project, you do not need the example: install **`django-requests-api`**, add **`requests_api`** to `INSTALLED_APPS`, and import from `requests_api` as in the [home page](../index.md).

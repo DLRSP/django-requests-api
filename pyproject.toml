@@ -1,12 +1,85 @@
 [build-system]
-requires = ["setuptools >= 40.8.0", "wheel"]
+requires = ["setuptools >= 61", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-requests-api"
+description = "Django application providing a thin requests.Session wrapper with a base URL and small HTTP helpers."
+authors = [
+    { name = "DLRSP", email = "dlrsp.dev@gmail.com" },
+]
+requires-python = ">=3.8"
+dynamic = ["version"]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["django", "requests", "http", "api"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.2",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "Django>=3.2",
+    "requests>=2.20",
+]
+
+[project.urls]
+Homepage = "https://github.com/DLRSP/django-requests-api"
+
+[project.optional-dependencies]
+testing = [
+    "coverage",
+    "codecov",
+]
+linting = [
+    "flake8",
+    "Flake8-pyproject",
+    "pylint",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+zip-safe = false
+
+[tool.setuptools.dynamic]
+version = { attr = "requests_api.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# py3-none-any wheel (not py2)
+[tool.distutils.bdist_wheel]
+universal = false
 
 [tool.black]
 target-version = ['py39']
 
 [tool.isort]
 profile = "black"
+
+# Read by flake8 when Flake8-pyproject is installed (extra `linting`).
+[tool.flake8]
+max-line-length = 80
+select = ["E", "F", "W", "B", "B950", "C", "I", "TYP"]
+ignore = ["E203", "E501", "W503"]
 
 [tool.mypy]
 check_untyped_defs = true
@@ -31,35 +104,37 @@ addopts = """\
     """
 django_find_project = false
 
+[tool.coverage.paths]
+source = ["src", ".tox/*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["requests_api"]
+
+[tool.coverage.report]
+show_missing = true
+
 [tool.towncrier]
 package = "requests_api"
 package_dir = "src"
 filename = "CHANGELOG.rst"
 directory = "news/"
-version = "0.6.1"
 
-# For rendering properly for this project
 issue_format = "`#{issue} <https://github.com/DLRSP/django-requests-api/issues/{issue}>`_"
-# template = "tools/news/template.rst"
 
-# Grouping of entries, within our changelog
 type = [
-  { name = "Process",                   directory = "process", showcontent = true },
+  { name = "Process", directory = "process", showcontent = true },
   { name = "Deprecations and Removals", directory = "removal", showcontent = true },
-  { name = "Features",                  directory = "feature", showcontent = true },
-  { name = "Bug Fixes",                 directory = "bugfix",  showcontent = true },
-  { name = "Vendored Libraries",        directory = "vendor",  showcontent = true },
-  { name = "Improved Documentation",    directory = "doc",     showcontent = true },
-  { name = "Trivial Changes",           directory = "trivial", showcontent = false },
+  { name = "Features", directory = "feature", showcontent = true },
+  { name = "Bug Fixes", directory = "bugfix", showcontent = true },
+  { name = "Vendored Libraries", directory = "vendor", showcontent = true },
+  { name = "Improved Documentation", directory = "doc", showcontent = true },
+  { name = "Trivial Changes", directory = "trivial", showcontent = false },
 ]
 
-# bump-my-version
 [tool.bumpversion]
 current_version = "0.6.2"
 allow_dirty = true
-
-[[tool.bumpversion.files]]
-filename = "./setup.cfg"
 
 [[tool.bumpversion.files]]
 filename = "./src/requests_api/__init__.py"

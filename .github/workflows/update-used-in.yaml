@@ -1,0 +1,15 @@
+---
+name: Update Used in consumers
+
+# Sync README + docs/community/references.md from DLRSP/workflows (code search).
+# Does not run on every CI push — only on schedule or manual dispatch.
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    uses: DLRSP/workflows/.github/workflows/update-used-in.yaml@main
+    secrets: inherit
