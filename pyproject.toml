@@ -37,7 +37,7 @@ classifiers = [
 ]
 dependencies = [
     "Django>=3.2",
-    "requests>=2.20",
+    "requests>=2.32.5",
 ]
 
 [project.urls]
