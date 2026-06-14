@@ -14,7 +14,7 @@
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.9+
 - Django 4.2+ (see package classifiers for the full matrix)
 
 ## Install

@@ -1,7 +1,6 @@
 [build-system]
 requires = [
-  "setuptools >= 77; python_version >= '3.9'",
-  "setuptools >= 40.8.0; python_version < '3.9'",
+  "setuptools >= 77",
   "wheel",
 ]
 build-backend = "setuptools.build_meta"
@@ -11,7 +10,7 @@ description = "Django application providing a thin requests.Session wrapper with
 authors = [
     { name = "DLRSP", email = "dlrsp.dev@gmail.com" },
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 dynamic = [
     "version",
 ]
@@ -38,7 +37,6 @@ classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",

@@ -6,7 +6,7 @@ Small Django app: a `requests.Session` wrapper with a fixed base URL, plus helpe
 
 ## Requirements
 
-- Python 3.8 or newer
+- Python 3.9 or newer
 - Django 4.2 or newer (see the package metadata for the exact matrix)
 
 We test against current patch releases of supported Python and Django versions.
