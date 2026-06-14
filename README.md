@@ -2,7 +2,7 @@
 
 [![PyPi status](https://img.shields.io/pypi/status/django-requests-api.svg)](https://pypi.python.org/pypi/django-requests-api)
 [![PyPi version](https://img.shields.io/pypi/v/django-requests-api.svg)](https://pypi.python.org/pypi/django-requests-api)
-[![PyPi python version](https://img.shields.io/pypi/pyversions/django-requests-api.svg)](https://pypi.python.org/pypi/django-requests-api)
+[![Python version](https://img.shields.io/badge/python-3.9%20|%203.10%20|%203.11%20|%203.12%20|%203.13-blue.svg)]()
 [![codecov.io](https://codecov.io/github/DLRSP/django-requests-api/coverage.svg?branch=master)](https://codecov.io/github/DLRSP/django-requests-api?branch=master)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/DLRSP/django-requests-api/master.svg)](https://results.pre-commit.ci/latest/github/DLRSP/django-requests-api/master)
 [![CI](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yaml/badge.svg)](https://github.com/DLRSP/django-requests-api/actions/workflows/ci.yaml)
