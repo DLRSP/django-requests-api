@@ -5,7 +5,6 @@ requires = [
   "wheel",
 ]
 build-backend = "setuptools.build_meta"
-
 [project]
 name = "django-requests-api"
 description = "Django application providing a thin requests.Session wrapper with a base URL and small HTTP helpers."
@@ -13,11 +12,20 @@ authors = [
     { name = "DLRSP", email = "dlrsp.dev@gmail.com" },
 ]
 requires-python = ">=3.8"
-dynamic = ["version"]
+dynamic = [
+    "version",
+]
 readme = "README.md"
 license = "MIT"
-license-files = ["LICENSE"]
-keywords = ["django", "requests", "http", "api"]
+license-files = [
+    "LICENSE",
+]
+keywords = [
+    "django",
+    "requests",
+    "http",
+    "api",
+]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
@@ -59,27 +67,30 @@ linting = [
 ]
 
 [tool.setuptools]
-package-dir = { "" = "src" }
 include-package-data = true
 zip-safe = false
 
-[tool.setuptools.dynamic]
-version = { attr = "requests_api.__version__" }
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.dynamic.version]
+attr = "requests_api.__version__"
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = [
+    "src",
+]
 
-# py3-none-any wheel (not py2)
 [tool.distutils.bdist_wheel]
 universal = false
 
 [tool.black]
-target-version = ['py39']
-
+line-length = 80
+target-version = ['py311']
 [tool.isort]
 profile = "black"
 
-# Read by flake8 when Flake8-pyproject is installed (extra `linting`).
+# Read by flake8 when flake8-pyproject is installed (extra `linting`).
 [tool.flake8]
 max-line-length = 80
 select = ["E", "F", "W", "B", "B950", "C", "I", "TYP"]
@@ -87,7 +98,6 @@ ignore = ["E203", "E501", "W503", "B950"]
 per-file-ignores = [
     "**/migrations/*:B950",
 ]
-
 [tool.mypy]
 check_untyped_defs = true
 disallow_any_generics = true
@@ -98,25 +108,25 @@ no_implicit_optional = true
 show_error_codes = true
 warn_unreachable = true
 warn_unused_ignores = true
-
-[[tool.mypy.overrides]]
-module = "tests.*"
-allow_untyped_defs = true
+overrides = [
+    { module = "tests.*", allow_untyped_defs = true },
+]
 
 [tool.pytest.ini_options]
-addopts = """\
-    --strict-config
-    --strict-markers
-    --ds=tests.settings
-    """
+addopts = "--strict-config\n    --strict-markers\n    --ds=tests.settings\n    "
 django_find_project = false
 
 [tool.coverage.paths]
-source = ["src", ".tox/*/site-packages"]
+source = [
+    "src",
+    ".tox/*/site-packages",
+]
 
 [tool.coverage.run]
 branch = true
-source = ["requests_api"]
+source = [
+    "requests_api",
+]
 
 [tool.coverage.report]
 show_missing = true
@@ -126,22 +136,20 @@ package = "requests_api"
 package_dir = "src"
 filename = "CHANGELOG.rst"
 directory = "news/"
-
 issue_format = "`#{issue} <https://github.com/DLRSP/django-requests-api/issues/{issue}>`_"
-
 type = [
-  { name = "Process", directory = "process", showcontent = true },
-  { name = "Deprecations and Removals", directory = "removal", showcontent = true },
-  { name = "Features", directory = "feature", showcontent = true },
-  { name = "Bug Fixes", directory = "bugfix", showcontent = true },
-  { name = "Vendored Libraries", directory = "vendor", showcontent = true },
-  { name = "Improved Documentation", directory = "doc", showcontent = true },
-  { name = "Trivial Changes", directory = "trivial", showcontent = false },
+    { name = "Process", directory = "process", showcontent = true },
+    { name = "Deprecations and Removals", directory = "removal", showcontent = true },
+    { name = "Features", directory = "feature", showcontent = true },
+    { name = "Bug Fixes", directory = "bugfix", showcontent = true },
+    { name = "Vendored Libraries", directory = "vendor", showcontent = true },
+    { name = "Improved Documentation", directory = "doc", showcontent = true },
+    { name = "Trivial Changes", directory = "trivial", showcontent = false },
 ]
 
 [tool.bumpversion]
 current_version = "0.6.4"
 allow_dirty = true
-
-[[tool.bumpversion.files]]
-filename = "./src/requests_api/__init__.py"
+files = [
+    { filename = "./src/requests_api/__init__.py" },
+]
