@@ -59,14 +59,18 @@ class CachedClientTests(SimpleTestCase):
         b = requests_api_for_base("https://b.example.com")
         self.assertIsNot(a, b)
 
-    @override_settings(APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 1}})
+    @override_settings(
+        APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 1}}
+    )
     def test_lru_eviction_when_maxsize_one(self):
         first = requests_api_for_base("https://a.example.com")
         requests_api_for_base("https://b.example.com")
         again = requests_api_for_base("https://a.example.com")
         self.assertIsNot(first, again)
 
-    @override_settings(APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 0}})
+    @override_settings(
+        APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 0}}
+    )
     def test_no_cache_when_maxsize_zero(self):
         a = requests_api_for_base("https://same.example.com")
         b = requests_api_for_base("https://same.example.com")

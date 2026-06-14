@@ -15,7 +15,9 @@ class RequestsApi:
             self.session = self.set_src_addr(src_addr)
         for arg in kwargs:
             if isinstance(kwargs[arg], dict):
-                kwargs[arg] = self.__deep_merge(getattr(self.session, arg), kwargs[arg])
+                kwargs[arg] = self.__deep_merge(
+                    getattr(self.session, arg), kwargs[arg]
+                )
             setattr(self.session, arg, kwargs[arg])
 
     @staticmethod
@@ -26,7 +28,11 @@ class RequestsApi:
         If *url* is already absolute (``http://`` or ``https://``), *url* is returned
         unchanged so callers can bypass the base when needed.
         """
-        b = base_url.decode("utf-8") if isinstance(base_url, bytes) else str(base_url)
+        b = (
+            base_url.decode("utf-8")
+            if isinstance(base_url, bytes)
+            else str(base_url)
+        )
         u = url.decode("utf-8") if isinstance(url, bytes) else str(url)
         u = u.strip()
         if u.startswith(("http://", "https://")):
@@ -53,25 +59,39 @@ class RequestsApi:
         return self.session.request(method, full_url, **kwargs)
 
     def options(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.options(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.options(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def head(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.head(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.head(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def get(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.get(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.get(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def post(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.post(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.post(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def put(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.put(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.put(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def patch(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.patch(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.patch(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def delete(self, url: str | bytes, **kwargs) -> requests.Response:
-        return self.session.delete(self.join_base_url(self.base_url, url), **kwargs)
+        return self.session.delete(
+            self.join_base_url(self.base_url, url), **kwargs
+        )
 
     def create_cookie(self, **kwargs) -> Cookie:
         return requests.cookies.create_cookie(**kwargs)

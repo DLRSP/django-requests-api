@@ -33,7 +33,9 @@ def normalize_api_language(
     Uses the primary subtag (segment before the first ``-``). If it is not in
     *allowed* (compared case-insensitively), returns *fallback*.
     """
-    allowed_set = frozenset(str(x).strip().lower() for x in allowed if str(x).strip())
+    allowed_set = frozenset(
+        str(x).strip().lower() for x in allowed if str(x).strip()
+    )
     fb = str(fallback).strip().lower() or "en"
     primary = (language_code or fb).strip().lower().split("-", 1)[0]
     if primary in allowed_set:

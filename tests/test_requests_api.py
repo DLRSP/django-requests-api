@@ -55,6 +55,8 @@ class JoinBaseUrlTests(TestCase):
 
     def test_absolute_url_unchanged(self):
         self.assertEqual(
-            RequestsApi.join_base_url("https://example.com", "https://other.test/z"),
+            RequestsApi.join_base_url(
+                "https://example.com", "https://other.test/z"
+            ),
             "https://other.test/z",
         )

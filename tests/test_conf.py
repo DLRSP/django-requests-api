@@ -12,7 +12,9 @@ class RequestsApiConfTests(SimpleTestCase):
     def test_cached_clients_maxsize_default(self):
         self.assertEqual(get_requests_api_cached_clients_maxsize(), 8)
 
-    @override_settings(APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 3}})
+    @override_settings(
+        APP_CONFIG={"requests_api": {"CACHED_CLIENTS_MAXSIZE": 3}}
+    )
     def test_cached_clients_maxsize_from_app_config(self):
         self.assertEqual(get_requests_api_cached_clients_maxsize(), 3)
 
@@ -26,7 +28,9 @@ class RequestsApiConfTests(SimpleTestCase):
     def test_default_request_timeout_none_by_default(self):
         self.assertIsNone(get_requests_api_default_request_timeout())
 
-    @override_settings(APP_CONFIG={"requests_api": {"DEFAULT_REQUEST_TIMEOUT": 42.5}})
+    @override_settings(
+        APP_CONFIG={"requests_api": {"DEFAULT_REQUEST_TIMEOUT": 42.5}}
+    )
     def test_default_request_timeout_from_app_config(self):
         self.assertEqual(get_requests_api_default_request_timeout(), 42.5)
 
