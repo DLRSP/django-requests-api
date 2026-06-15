@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   policy-gate:
     uses: DLRSP/workflows/.github/workflows/pr-policy-gate.yaml@main

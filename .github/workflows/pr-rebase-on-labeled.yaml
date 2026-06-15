@@ -1,0 +1,15 @@
+---
+name: Rebase Pull Request
+
+on:
+  pull_request:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  main:
+    uses: DLRSP/workflows/.github/workflows/pr-rebase-on-labeled.yaml@main
+    secrets: inherit
