@@ -1,0 +1,11 @@
+---
+name: Bot PR policy gate
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  policy-gate:
+    uses: DLRSP/workflows/.github/workflows/pr-policy-gate.yaml@v1.19.0
+    secrets: inherit
