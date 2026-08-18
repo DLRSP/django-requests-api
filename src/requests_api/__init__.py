@@ -24,7 +24,7 @@ __all__ = [
     "requests_api_for_base",
 ]
 
-__version__ = "0.6.8"
+__version__ = "0.6.9"
 __version_info__ = tuple(
     int(i) if i.isdigit() else i for i in __version__.split(".")
 )
