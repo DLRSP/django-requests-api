@@ -161,7 +161,7 @@ package = "requests_api"
 package_dir = "src"
 filename = "CHANGELOG.rst"
 directory = "news/"
-version = "0.6.9"
+version = "0.6.10"
 issue_format = "`#{issue} <https://github.com/DLRSP/django-requests-api/issues/{issue}>`_"
 type = [
     { name = "Process", directory = "process", showcontent = true },
@@ -174,7 +174,7 @@ type = [
 ]
 
 [tool.bumpversion]
-current_version = "0.6.9"
+current_version = "0.6.10"
 allow_dirty = true
 files = [
     { filename = "./src/requests_api/__init__.py" },
